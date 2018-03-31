@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -144,7 +145,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\XMyanmarAPIService\Reference.cs">
+    <Compile Include="Connected Services\XMyanmarAPI\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -159,37 +160,48 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\XMyanmarAPIService\configuration91.svcinfo" />
-    <None Include="Connected Services\XMyanmarAPIService\configuration.svcinfo" />
-    <None Include="Connected Services\XMyanmarAPIService\Reference.svcmap">
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI.disco" />
+    <None Include="Connected Services\XMyanmarAPI\configuration91.svcinfo" />
+    <None Include="Connected Services\XMyanmarAPI\configuration.svcinfo" />
+    <None Include="Connected Services\XMyanmarAPI\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\X.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\xMyanmarLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Connected Services\XMyanmarAPIService\Service1.wsdl" />
-    <None Include="Connected Services\XMyanmarAPIService\XMyanmarAPI.xsd">
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI.wsdl" />
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\XMyanmarAPIService\XMyanmarAPI1.xsd">
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\XMyanmarAPIService\XMyanmarAPI2.xsd">
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Connected Services\XMyanmarAPIService\XMyanmarFrontUI.XMyanmarAPIService.CompositeType.datasource">
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\XMyanmarAPI\XMyanmarAPI4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\XMyanmarAPI\XMyanmarFrontUI.XMyanmarAPI.ResCategory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\XMyanmarAPI\XMyanmarFrontUI.XMyanmarAPI.ResLogin.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -242,7 +254,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\XMyanmarAPIService\" />
+    <WCFMetadataStorage Include="Connected Services\XMyanmarAPI\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -262,7 +274,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58595</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/XMyanmarFrontUI</IISUrl>
+          <IISUrl>http://localhost:8080/XMyanmarFrontUI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
