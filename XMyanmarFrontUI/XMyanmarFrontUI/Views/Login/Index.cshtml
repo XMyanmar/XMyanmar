@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script>
+			appRootDir = '@HttpRuntime.AppDomainAppVirtualPath';
+			if (appRootDir === '/') {
+				appRootDir = '';
+			}
+</script>
+@section Scripts{
+    @Scripts.Render("~/bundles/login")
+}
+
+ <!-- Submit Sign In -->
+<div class="form-group" style="margin-top: 30px;">
+    <div style="text-align: center;">
+        <input id="SignIn" type="submit" value=SignIn class="btn btn-large btn-primary" />
+    </div>
+</div>
+
